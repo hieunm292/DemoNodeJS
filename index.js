@@ -29,16 +29,6 @@ app.get('/search', function (req, res) {
     });
 })
 
-app.get('/search', function (req, res) {
-    var title = req.query.title;
-    var data = posts.filter(function (item) {
-        return item.title.toLowerCase().indexOf(title.toLowerCase()) !== -1
-    });
-    res.render('index', {
-        posts: data
-    });
-})
-
 
 app.get('/create', (req, res, next) => {
     res.render('create', {})

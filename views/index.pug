@@ -1,0 +1,23 @@
+.posts
+  head
+    style.
+      table, th, td {
+      border: 1px solid black;
+      }
+  table
+   .search 
+    form(action="/search", method="GET")
+      input(name="id", type="text", placeholder="id")
+      button Search
+      a(href='/create') Create
+   thead
+      tr
+        th  Id
+        th  Title
+        th  Description
+   tbody
+    each post in posts
+      tr
+        td=  post.id
+        td=  post.title
+        td=  post.des

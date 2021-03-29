@@ -1,0 +1,17 @@
+head
+style.
+	label, input, button {
+	margin: 10px;
+	}
+h1 Create Post
+form(action="/create" method="POST")
+	label(id="id")
+	input(type="text", placeholder="id", name="id")
+	br
+	label(id="title")
+	input(type="text", placeholder="title", name="title")
+	br
+	label(id="des")
+	input(type="text", placeholder="description", name="des")
+	br
+	button Create
